@@ -1,7 +1,8 @@
 # Writing PhD thesis - LIP6 guide
 
 This repository contains a thesis template based on the version provided by LIP6. The latest version of the original template can be found at this [link](https://nuage.lip6.fr/index.php/s/Se3c4XDBm72FrMP?opendetails=).
-I will use this template to write my PhD thesis, following the requirements specified below. The doc/ directory contains the content of each chapter, while these.tex is the main file of the project. The compiled PDF files are not versioned in this repository and are therefore not included in the commits.
+
+I will use this template to write my PhD thesis, following the requirements specified below. The `doc/` directory contains the content of each chapter, while `these.tex` is the main file of the project. The compiled PDF files are not versioned in this repository and are therefore not included in the commits.
 
 ## Writing language
 
