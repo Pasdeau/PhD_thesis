@@ -7,10 +7,7 @@
 *.backup
 .#*
 
-
-##########
-# LaTeX 
-##########
+# LaTeX aux files
 
 *.aux
 *.log
@@ -39,7 +36,15 @@
 *.xdv
 
 # The thesis PDF
-these.pdf
+# these.pdf
 
 theseCOUV1.pdf
 theseCOUV2.pdf
+
+# minitoc aux files
+*.mtc*
+*.maf
+*.mlf*
+*.mlt*
+*.ptc*
+*.stc*

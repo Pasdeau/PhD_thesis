@@ -1,29 +1,133 @@
 % !TeX root = ../these.tex
 %% -*- coding: utf-8; IspellDict: francais -*- 
 
-\mychapter{Introduction}
+\chapter{Introduction}
 \label{chap:intro}
 
-Ce document est d'une nature double : 
-\begin{enumerate}
-	\item il est le résultat d'un template \LaTeX{}  et peut donc être réutilisé en l'état pour produire un mémoire de thèse de doctorat ;
-	\item il est un manuel pour apprendre à gérer en \LaTeX{}:
-	\begin{itemize}
-		\item l'intertextualité,
-		\item les figures et les tableaux.
-	\end{itemize}
-\end{enumerate}
+\minitoc
+\clearpage
 
-Précisons aussi ce qu'il n'est pas :
+% INTRODUCTION
+\begin{introchapter}
+  Ce chapitre parle de machines, de logiciels et de fichiers.
+\end{introchapter}
+
+
+% PREMIERE SECTION
+\section{Installation}
+\label{sec:1}
+\index{sujet de la section 1|textbf}
+
+Vous trouverez sur ce site \url{https://gte.univ-littoral.fr/Members/denis-bitouze/pub/latex/diapositives-cours-d/installation-latex.pdf/view} un guide d'installation de \LaTeX{} qui couvre les différents systèmes d'exploitation.
+
+
+% DEUXIEME SECTION
+\section{Éditeurs}
+
+Plusieurs outils sont disponibles pour écrire en \LaTeX{}. Ceux que nous présentons ici sont à installer sur votre ordinateur, mais il est toujours possible de faire du \LaTeX{} en ligne avec \href{https://www.overleaf.com/}{\textcolor{green}{Overleaf}}. Vous pouvez trouver une comparaison d'éditeurs sur Wikipedia\footnotemark (le lien dans la note de bas de page est cliquable).
+
+\footnotetext{\url{https://en.wikipedia.org/wiki/Comparison_of_TeX_editors}} 
+
+
+Laissons parler quelques éditeurs d'éditeurs...
+
+\subsection{TeXShop (Mac)}
+
+"TeXShop is a TeX previewer for Mac OS X, written in Cocoa. Since pdf is a native file format on OS X, TeXShop uses "pdftex" and "pdflatex" rather than "tex" and "latex" to typeset in its default configuration; these programs in the standard TeX Live distribution of TeX produce pdf output instead of dvi output.
+
+TeXShop uses TeX Live, a standard distribution of Tex programs maintained by the TeX Users Group (TUG) for Mac OS X, Windows, Linux, and various other Unix machines. The distribution includes tex, latex, dvips, tex fonts, cyrillic fonts, and virtually all other programs and supporting files commonly used in the TeX world. The most recent version of this distribution is maintained for the Mac by the MacTeX TeXnical Working Group of the TeX Users Group and available under the "Obtaining" tab.
+
+The latest TeXShop release, version 3, requires System 10.7 (Lion). An earlier version of TeXShop, version 2, is also maintained and requires System 10.4 (Tiger), although System 10.5 (Leopard) is strongly recommended because it fixes several important bugs in Apple's PDFKit code, extensively used in TeXShop. Users with systems 10.2 or 10.3 should use TeXShop 1.43, and users with systems 10.0 and 10.1 should use TeXShop 1.19. Both of these versions are available on this site.
+
+TeXShop is distributed under the GPL public license, and thus free."
+
+\subsection{TeXStudio (Linux / Mac / Windows)}
+
+"TeXstudio is an integrated writing environment for creating LaTeX documents. Our goal is to make writing LaTeX as easy and comfortable as possible. Therefore TeXstudio has numerous features like syntax-highlighting, integrated viewer, reference checking, and various assistants. For more details see the features.
+
+TeXstudio is open-source and is available for all major operating systems."
+
+\subsection{TeXMaker (Linux / Mac / Windows)}
+
+"Texmaker is a free, modern and cross-platform LaTeX editor for linux, macosx and windows systems that integrates many tools needed to develop documents with LaTeX, in just one application.
+Texmaker includes unicode support, spell checking, auto-completion, code folding and a built-in pdf viewer with synctex support and continuous view mode.
+Texmaker is easy to use and to configure.
+Texmaker is released under the GPL license ."
+
+
+% TROISIEME SECTION
+\section{Les fichiers de ce template}
+\label{sec:fichiers}
+
+Maintenant que vous avez installé \LaTeX{} et un éditeur, vous pouvez générer un document à partir de ce template.
+
+L'arborescence du dossier \textbf{ModeleLIP6} est la suivante : 
 \begin{itemize}
-	\item il ne dit rien du contenu (ce qui doit figurer dans une introduction, le nombre de parties que doit comporter le mémoire, quelle taille doit faire le résumé),
-	\item il n'est pas un format à respecter absolument et peut être amendé à votre guise.
+  \item biblio.bib
+  \item \textbf{doc}
+	  \begin{itemize}
+	    \item 0\_1\_couverture.tex
+	    \item 0\_2\_dedicace.tex
+	    \item 0\_3\_merci.tex
+	    \item 1\_intro.tex
+	    \item 2\_1\_chap1.tex
+	    \item 2\_2\_chap2.tex
+	    \item 2\_3\_chap3.tex
+	    \item 3\_concl.tex
+	    \item 4\_1\_anx1.tex
+	    \item 4\_2\_anx2.tex
+	    \item 5\_resume.tex
+	  \end{itemize}
+  \item \textbf{figures}
+  \begin{itemize}
+    \item circul.png
+    \item processusAcq.pdf
+    \item these\_licence.png
+     \item \textbf{logos}
+     	\begin{itemize}
+     		\item logo\_SU.png
+     		\item LogoLIP6BleuNuit.eps
+     		\item LOGO\_CNRS\_BLEU.eps
+     	\end{itemize}
+  \end{itemize}
+  \item kalikef.bst
+  \item preambule.tex
+  \item orthoTypo.tex
+  \item these.tex
+  \item ths.sty
+  \item url.sty
 \end{itemize}
 
-\bigskip
-{\sc nota bene} : nous travaillons ici avec pdflatex et bibtex ; c'est très éprouvé, faute d'être le plus récent...
+\subsection{\emph{a minima}}
+Si vous ne voulez pas trop vous poser de question, vous ouvrer le fichier these.tex avec votre éditeur et vous lancez la composition. Vous devriez arriver à un résultat.
 
-\bigskip
-Une bonne lecture : \url{http://barthes.enssib.fr/PUN/LaTeX-pour-litteraires.pdf}
+Et si vous voulez changer le texte, ouvrez le fichier .tex correspondant avec un éditeur de texte (ou votre éditeur \LaTeX{}, mais en faisant bien attention à ne pas tenter de relancer la composition à partir du fichier ouvert - ça ne donnera qu'une erreur - mais toujours à partir de these.tex) et modifiez.
 
-Et la feuille de style de Sorbonne Université pour le doctorat : \url{https://www.sorbonne-universite.fr/sites/default/files/media/2020-07/style.docx} (téléchargement direct).
+Suivant la feuille de style des thèses pour Sorbonne Université, les fichiers dans \textbf{doc} sont organisés en cinq groupes : 
+\begin{itemize}
+  \item ce qui vient avant l'introduction, numéroté en 0\_x (parce que vous pouvez avoir envie d'ajouter ou de retirer des choses)
+  \item l'introduction numérotée 1 : il n'y en a généralement qu'une
+  \item les chapitres, numérotés en 2\_x, pour que vous puissiez en mettre autant que vous le souhaitez
+  \item la conclusion numérotée 3 : il n'y en a qu'une
+  \item les annexes numérotées en 4\_ : autant que vous voulez
+  \item le résumé (ou plutpot les résumés en français et en anglais) numéroté 5
+\end{itemize}
+
+Et pour les \textbf{figures}, il y a celles qui servent pour la couverture dans \textbf{logos} et les autres qui servent pour illustrer l'utilisation de figures dans ce template, dont vous pourrez vous séparer, ou au moins ne plus les appeler dans le texte.
+
+
+\subsection{que faire quand ça plante ?}
+Lors de la composition, un certain nombre de fichiers sont générés.
+
+Si, suite à une modification dans un fichier, la composition n'aboutit pas - pas plus après la correction apportée à l'erreur indiquée - supprimez tous les fichiers non mentionnés ci-dessus comme faisant partie de ModeleLIP6 ! 
+
+C'est-à-dire tous les fichiers qui commencent par \emph{these} \textcolor{red}{et dont le suffixe n'est pas \emph{.tex}}.
+
+\subsection{et les autres fichiers ?}
+\begin{description}
+  \item[these.tex] est un fichier que vous allez modifier quand vous changerez les fichiers contenus dans \textbf{doc}, puisque c'est le fichier maître qui appelle ceux-ci.
+  \item[biblio.bib] est un fichier que vous allez vouloir modifier parce qu'il contient les références bibliographiques. En l'état, il vous donne quelques exemples. Faire sa bibliographie à la main est fastidieux, mais on peut faire des choses bien avec Zotero.
+  \item[orthoTypo.tex] crée des commandes pour normaliser l'affichage d'expressions susceptibles de revenir souvent. Par exemple en tapant \verb"\postpartum" on obtient : \postpartum, en tapant \verb"\mysql" on obtient \mysql, ou en tapant \verb"\maflechasuivre" on obtient \maflechasuivre .
+  \item \textbf{kalikef.bst} est de la mise en forme de la biblio ; \textbf{preambule.tex} importe les packages ; \textbf{ths.sty} fixe le style ; vous pouvez bien sûr modifier ces fichiers, si vous vous sentez suffisamment \emph{fluent} en \LaTeX{}.
+
+\end{description}

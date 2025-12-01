@@ -17,7 +17,8 @@
 
 \begin{document}
 
-\renewcommand{\bibname}{Références}
+\dominitoc
+
 \renewcommand{\seename}{voir}
 
 \pagenumbering{roman} %jusqu'à la table des matières, numérotation en chiffres romains
@@ -34,6 +35,10 @@
 \input{./doc/0_3_merci}
 \finishedchapter
 
+%%%%%%%%%% RESUME
+\input{./doc/6_resume}
+\finishedchapter
+
 %%%%%%%%%% TABLE DES MATIERES
 \tableofcontents
 \finishedchapter
@@ -43,25 +48,39 @@
 \setcounter{secnumdepth}{6}
 \pagestyle{fancy}
 
+%%%%%%%%%% TABLE DES FIGURES
+\listoffigures
+\finishedchapter
+
+%%%%%%%%%% TABLE DES TABLEAUX
+\renewcommand\listtablename{Table des tableaux}
+\addcontentsline{toc}{chapter}{Table des tableaux}
+\listoftables
+\finishedchapter
+
 %%%%%%%%%% CHAPITRES
 % Introduction
 \input{./doc/1_intro}
 \finishedchapter
 
-% Partie I
-\input{./doc/2_1_chap1}
+% Ètats de l'art
+\input{./doc/2_EDA}
 \finishedchapter
 
-% Partie II
-\input{./doc/2_2_chap2}
+% Partie Modélisation
+\input{./doc/3_1_chap1}
 \finishedchapter
 
-% Partie III
-\input{./doc/2_3_chap3}
+% Partie Prototype
+\input{./doc/3_2_chap2}
+\finishedchapter
+
+% Partie Algorithmes
+\input{./doc/3_3_chap3}
 \finishedchapter
 
 %Conclusion
-\input{./doc/3_concl}
+\input{./doc/4_concl}
 \finishedchapter
 
 %%%%%%%%%% BIBLIOGRAPHIE
@@ -80,19 +99,11 @@
 
 \chapter*{Annexes}
 
-\input{./doc/4_1_anx1}
+\input{./doc/5_1_anx1}
 \finishedannex
-\input{./doc/4_2_anx2}
+\input{./doc/5_2_anx2}
 
-%%%%%%%%%% TABLE DES FIGURES
-\listoffigures
-\finishedchapter
-
-%%%%%%%%%% TABLE DES TABLEAUX
-\renewcommand\listtablename{Table des tableaux}
-\addcontentsline{toc}{chapter}{Table des tableaux}
-\listoftables
-\finishedchapter
+\renewcommand{\bibname}{Références}
 
 %%%%%%%%%% INDEX
 %\printindex
@@ -100,9 +111,6 @@
 %\thispagestyle{empty}
 %~\newpage
 %\thispagestyle{empty}
-
-%%%%%%%%%% RESUME
-\input{./doc/5_resume}
 
 %FIN DU DOCUMENT %
 %%%%%%%%%%%%%
