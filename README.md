@@ -1,6 +1,7 @@
 # Writing PhD thesis - LIP6 guide
 
-This repository aims at providing some guidance to write your PhD thesis. It is up to the reader to check that the information is still up to date when submitting the thesis (and to notify changes by sending an email to <conseil-doctorants@lip6.fr>).
+This repository contains a thesis template based on the version provided by LIP6. The latest version of the original template can be found at this [link](https://nuage.lip6.fr/index.php/s/Se3c4XDBm72FrMP?opendetails=).
+I will use this template to write my PhD thesis, following the requirements specified below. The doc/ directory contains the content of each chapter, while these.tex is the main file of the project. The compiled PDF files are not versioned in this repository and are therefore not included in the commits.
 
 ## Writing language
 
@@ -75,10 +76,6 @@ Here is a Sorbonne Université guide (in French) about legal duties, submission,
 If you are new to LaTeX, some training courses dedicated to PhD thesis are offered by Sorbonne Université. They are listed in [ADUM](https://adum.fr/) in the training courses section.
 
 Also, it is common practice to print several hard copies of your thesis for the *rapporteurs* to read, and for the time of your defense.
-
-## Contact
-
-To correct or to update any information, feel free to send an email to <conseil-doctorants@lip6.fr>. It would be helpful for everybody.
 
 ## References
 
