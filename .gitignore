@@ -1,0 +1,45 @@
+.DS_Store
+
+.vscode/
+
+*~
+*.bak
+*.backup
+.#*
+
+
+##########
+# LaTeX 
+##########
+
+*.aux
+*.log
+*.toc
+*.lof
+*.lot
+*.fls
+*.out
+*.fdb_latexmk
+*.synctex.gz
+
+*.bbl
+*.blg
+
+*.idx
+*.ind
+*.ilg
+
+*.nav
+*.snm
+*.vrb
+*.lol
+*.loe
+
+# latexmk 
+*.xdv
+
+# The thesis PDF
+these.pdf
+
+theseCOUV1.pdf
+theseCOUV2.pdf
