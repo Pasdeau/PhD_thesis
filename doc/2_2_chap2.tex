@@ -1,0 +1,98 @@
+%% -*- coding: utf-8; IspellDict: francais -*- 
+
+\chapter{Intertextualité}
+\label{chap:chap2}
+
+% INTRODUCTION
+\begin{introchapter}
+  Ce chapitre traite de morceaux de texte qui renvoient à d'autres morceaux de texte.
+\end{introchapter}
+
+
+% PREMIERE SECTION
+\section{Notes de bas de page}
+\label{sec:sec1}
+\index{sujet de la section 1|textbf}
+
+La section 1 commence par une note de bas de page \footnote{Note de bas de page.} et s'obtient avec  :
+
+\verb"\footnote{Note de bas de page.}".
+
+% DEUXIEME SECTION
+\section{Citations}
+Quoi de mieux ici qu'une citation de Voltaire : 
+
+\begin{quote}
+L'art de la citation est l'art de ceux qui ne savent pas réfléchir par eux-mêmes.
+\end{quote}
+
+Je n'ai pas eu d'autre idée de citation.
+
+Mais je l'ai obtenue comme ceci : \newline
+\verb"\begin{quote}" \newline
+\verb"L'art de la citation est l'art de ceux qui ne savent pas réfléchir" \newline
+\verb "par eux-mêmes." \newline
+\verb"\end{quote}"
+
+% TROISIEME SECTION
+\section{Référence bibliographique}
+Pour pouvoir citer une référence bibliographique, il faut bien entendu qu'elle soit présente dans le fichier biblio.bib, au format requis.
+
+
+Il y a plusieurs manières de se référer à une référence bibliographique : 
+\begin{itemize}
+  \item avec un \verb"\citet{}" pour une citation \emph{dans le texte} : \citet{Brachman:INBOOK91}
+  \item avec un \verb"\citep{}" pour une citation \emph{entre parenthèses} : \citep{Brachman:INBOOK91}
+  \item avec un \verb"\citep[voir][]{}" qui donne : \citep[voir][]{Brachman:INBOOK91}
+  \item avec un \verb"\citep[chap. 14]{}" qui donne : \citep[chap. 14]{Brachman:INBOOK91}
+  \item avec un \verb"\citeyear" qui donne seulement l'année : \citeyear{Brachman:INBOOK91}
+  \item et bien d'autres manières... \url{http://merkel.texture.rocks/Latex/natbib.php?lang=fr}
+\end{itemize}
+
+\textbf{Nota bene} : l'ajout de références bibliographiques appelle une compilation particulière : d'abord compiler le BibTeX, puis compiler le LaTeX (deux fois) pour que les points d'interrogation soient remplacés par les références, et que celles-ci apparaissent dans la bibliographie.
+
+%QUATRIEME SECTION
+\section{Renvois internes}
+Par renvois internes, nous entendons un système d'ancres qui permet de renvoyer à une autre partie du texte. Par exemple, si vous ne vous souvenez pas où sont les fichiers de ce template, j'en ai parlé dans la section~\ref{sec:fichiers} du chapitre~\ref{chap:tourner} 
+
+(sous le capot : \verb"dans la section~\ref{sec:fichiers} du" \newline
+\verb "chapitre~\ref{chap:tourner}"), 
+
+qui était la section intitulée :~\nameref{sec:fichiers} 
+
+(sous le capot : \verb"qui était la section intitulée:~\nameref{sec:fichiers}").
+
+Evidemment, il faut avoir ajouté ces ancres sous le chapitre : \verb"\label{chap:tourner}" et sous la section : \verb"\label{sec:fichiers}"
+
+Vous pouvez donc modifier la disposition de votre document : du moment que vous vous référez à un chapitre et à une section par une référence croisée, c'est le bon chiffre qui s'affichera.
+
+Les chapitres, les sections, les sous-sections, les notes de bas de page, les théorèmes, les équations, les figures et les tableaux peuvent être référencés
+
+% CINQUIEME SECTION
+\section{Liens externes}
+Voici deux manières simples de faire des liens cliquables :
+\begin{description}
+  \item[en affichant l'URL] avec une commande \verb"\url{<url>}" : connaissez-vous Learn\LaTeX.org ? c'est ici : \url{https://www.learnlatex.org/fr/}
+  \item[en rendant un ou des mots cliquables] avec une commande \verb"href{<url>}{<mot_cliquable>}" : connaissez-vous \href{https://www.learnlatex.org/fr/}{Learn\LaTeX.org ?}
+\end{description}
+
+\textbf{Nota bene} : le choix qui a été fait est de ne pas signaler les liens, en stipulant de les cacher (voir fichier preambule.tex, package hyperref : l'option hidelinks). Une solution peut être de rajouter une couleur au texte cliquable : 
+
+\verb"href{<url>}{\textcolor{blue}{<mot_cliquable>}}" ; 
+
+une solution plus radicale est de retirer l'option hidelinks dans le preambule.tex.
+
+
+% SIXIEME SECTION
+\section{Annotations de travail}
+
+Ces annotations peuvent être utiles, qu'elles soient des messages qu'on s'adresse à soi-même ou qu'un relecteur (à qui on a envoyé tout son dossier de thèse en \LaTeX{}) nous adresse...
+
+\bigskip
+
+\adev{cette partie doit être plus fouillée}\lipsum[2]
+
+\acorr{Lorem doit être remplacé par Morel}\lipsum[1]
+
+
+

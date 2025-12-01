@@ -1,0 +1,49 @@
+% !TeX root = these.tex
+%% -*- Coding: utf-8; IspellDict: francais -*- 
+
+\documentclass[twoside,11pt]{report}	%définition de la classe LaTeX du document
+
+%%%%%%%%%%%%
+% PACKAGES %
+%%%%%%%%%%%%
+
+\usepackage[utf8]{inputenc}		%encodage d'entrée (fichier source)
+\usepackage[T1]{fontenc}		%caractères accentués (fichier de sortie)
+\usepackage{newcent}			%police de caractères
+
+\usepackage{natbib}				%customisation des citations /!\ chargé avant babel
+\usepackage[english,main=french]{babel}		%conventions de la typographie française
+\usepackage{pifont}				%symboles
+\usepackage{xspace}				%pour ne pas manger les espaces
+
+\usepackage{verbatim}			%réimplémentation de l'environnement verbatim
+
+\usepackage{graphicx}			%graphiques
+\usepackage[pdftex]{color}		%couleurs de base par leur nom
+
+\usepackage[hyphens]{url}				%liens cliquables, coupés quand trop longs
+\usepackage[hidelinks]{hyperref}%références croisées dans le document
+
+\usepackage{makeidx}			%créer un index
+
+\usepackage{a4wide}				%agrandit les blocs de texte dans la page
+
+\usepackage{fancyhdr}			%contrôle des têtes et pieds de page
+\usepackage[Sonny]{fncychap}	%styler les titres
+
+\usepackage{ths}				%commandes ad hoc - cf ths.sty
+
+\usepackage[light]{draftcopy}	%indiquer que c'est un premier jet
+
+\usepackage[toc,page]{appendix}	%pour les annexes
+\usepackage{chngcntr}			%changer le compteur des figures (dans les annexes)
+
+\usepackage{lipsum}				%pour faire du remplissage à base de Lorem ipsum...
+
+\usepackage{subfigure}
+
+%%%%%%%%%%
+% AUTRES %
+%%%%%%%%%%
+
+\graphicspath{{./figures/}}		%chemin vers les images

@@ -1,0 +1,88 @@
+%% -*- coding: utf-8; IspellDict: francais -*- 
+
+\chapter{Tableaux, illustrations \& figures}
+\label{chap:chap3}
+
+% INTRODUCTION
+\begin{introchapter}
+  Ce chapitre parle de tableaux et de figures.
+\end{introchapter}
+
+
+% PREMIERE SECTION
+\section{Tableaux}
+\label{sec:sec1}
+\index{sujet de la section 1|textbf}
+
+Le tableau~\ref{table:temp} est assez simple.
+
+\begin{table}[htbp]
+\begin{center}
+    \begin{tabular}{ | l | l | l | p{5cm} |}
+    \hline 
+    Day & Min Temp & Max Temp & Summary \\ 
+    \hline 
+    Monday & 11C & 22C & A clear day with lots of sunshine.  
+    However, the strong breeze will bring down the temperatures. \\ 
+    \hline 
+    Tuesday & 9C & 19C & Cloudy with rain, across many northern regions. Clear spells 
+    across most of Scotland and Northern Ireland, 
+    but rain reaching the far northwest. \\ 
+    \hline 
+    Wednesday & 10C & 21C & Rain will still linger for the morning. 
+    Conditions will improve by early afternoon and continue 
+    throughout the evening. \\
+    \hline
+    \end{tabular}
+     \caption{Le temps qu'il fait dans des régions septentrionales}
+     \label{table:temp}
+\end{center}
+\end{table}
+
+Il y a tant de paramètres et de possibilités que le mieux est de vous renvoyer là : \url{https://en.wikibooks.org/wiki/LaTeX/Tables}
+
+Mais un petit dernier pour la route :
+
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{llr}
+\hline
+\multicolumn{2}{c}{Item} \\
+\cline{1-2}
+Animal    & Description & Price (\$) \\
+\hline
+Gnat      & per gram    & 13.65      \\
+          & each        & 0.01       \\
+Gnu       & stuffed     & 92.50      \\
+Emu       & stuffed     & 33.33      \\
+Armadillo & frozen      & 8.99       \\
+\hline
+\end{tabular}
+\caption{Prix d'animaux en mauvais état}
+\end{center}
+\end{table}
+
+Explication : un tableau est \emph{flottant}. Il vaut donc mieux s'y référer autrement que comme c'est fait ci-dessus et plutôt comme c'est fait dans le premier exemple.
+
+Heureusement, vous avez une table des figures et la possibilité de faire des renvois internes (en labellisant le tableau, ce qui a été fait pour le premier tableau).
+
+Sinon, vous pouvez vous retrouver avec un tableau renvoyé à une page suivante, alors que vous l'avez placé au «\,bon\,» endroit dans votre fichier .tex.
+
+% DEUXIEME SECTION
+\section{Images}
+
+Voici donc une figure. Elle est numérotée automatiquement (comme l'étaient les tableaux) et ici, comble du raffinement, le \verb"\caption" contient une référence bibliographique (cliquable, vers la référence dans la bibliographie).
+
+
+
+\begin{figure}[htbp]
+    \begin{center}
+%    \includegraphics[width=0.75\textwidth]{%
+    \includegraphics[width=0.95\textwidth]{%
+      processusAcq}
+      \caption{L'acquisition des connaissances conduite par les modèles %
+        (tiré de \citep{Aussenac:RIA92}).}
+      \label{fig:pracq}
+    \end{center}
+\end{figure}
+

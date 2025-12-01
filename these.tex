@@ -1,0 +1,110 @@
+%% Version 2025, MAJ le 30 nov 2025
+
+\input preambule		%import des packages, classe du document, chemin vers les images
+
+\input{orthoTypo.tex}		%petites capitales pour certains noms
+
+%%%%%%%%%
+% MANUSCRIT %
+%%%%%%%%%
+
+\date{\today}
+
+\makeindex
+
+% DOCUMENT %
+%%%%%%%%%
+
+\begin{document}
+
+\renewcommand{\bibname}{Références}
+\renewcommand{\seename}{voir}
+
+\pagenumbering{roman} %jusqu'à la table des matières, numérotation en chiffres romains
+
+%%%%%%%%%% EPIGRAPHIE
+\thispagestyle{empty}
+\pagestyle{empty}
+\input{./doc/0_1_couverture}
+\finishedchapter
+
+\input{./doc/0_2_dedicace}
+\finishedchapter
+
+\input{./doc/0_3_merci}
+\finishedchapter
+
+%%%%%%%%%% TABLE DES MATIERES
+\tableofcontents
+\finishedchapter
+
+\pagenumbering{arabic} % à partir de là, numérotation des pages en chiffres arabes
+\setcounter{page}{1}
+\setcounter{secnumdepth}{6}
+\pagestyle{fancy}
+
+%%%%%%%%%% CHAPITRES
+% Introduction
+\input{./doc/1_intro}
+\finishedchapter
+
+% Partie I
+\input{./doc/2_1_chap1}
+\finishedchapter
+
+% Partie II
+\input{./doc/2_2_chap2}
+\finishedchapter
+
+% Partie III
+\input{./doc/2_3_chap3}
+\finishedchapter
+
+%Conclusion
+\input{./doc/3_concl}
+\finishedchapter
+
+%%%%%%%%%% BIBLIOGRAPHIE
+{\small
+\bibliographystyle{kalikef}
+\bibliography{biblio}
+\finishedchapter
+}
+
+%%%%%%%%%% ANNEXES
+\renewcommand{\appendixtocname}{Annexes}
+\appendix
+\addappheadtotoc
+\renewcommand\thesection{\Alph{section}}
+\counterwithin{figure}{section}
+
+\chapter*{Annexes}
+
+\input{./doc/4_1_anx1}
+\finishedannex
+\input{./doc/4_2_anx2}
+
+%%%%%%%%%% TABLE DES FIGURES
+\listoffigures
+\finishedchapter
+
+%%%%%%%%%% TABLE DES TABLEAUX
+\renewcommand\listtablename{Table des tableaux}
+\addcontentsline{toc}{chapter}{Table des tableaux}
+\listoftables
+\finishedchapter
+
+%%%%%%%%%% INDEX
+%\printindex
+%\finishedchapter
+%\thispagestyle{empty}
+%~\newpage
+%\thispagestyle{empty}
+
+%%%%%%%%%% RESUME
+\input{./doc/5_resume}
+
+%FIN DU DOCUMENT %
+%%%%%%%%%%%%%
+\end{document}
+
